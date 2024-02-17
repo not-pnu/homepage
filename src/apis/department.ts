@@ -3,7 +3,7 @@ import { Department } from "../@types/page";
 
 export async function getDepartmentBoard(): Promise<Department[]> {
   try {
-    const res = await axios.get("http://localhost:8000/api/department/board");
+    const res = await axios.get("/api/department/board");
     if (res.data.type === "SUCCESS") {
       return res.data.data;
     } else {
