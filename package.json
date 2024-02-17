@@ -1,5 +1,7 @@
 {
   "name": "mail-badara",
+  "displayName": "Mail Badara",
+  "homepage": "https://mailbadara.github.io/homepage",
   "private": true,
   "version": "2.1.0",
   "type": "module",
