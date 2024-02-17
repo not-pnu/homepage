@@ -8,36 +8,41 @@ import HomeScreen from "./pages/HomeScreen";
 import { FaSchool } from "react-icons/fa";
 import { BiHome, BiNotepad } from "react-icons/bi";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <MainPage />,
+      index: true,
+    },
+    {
+      path: "/validation/:email",
+      element: <ValidationPage />,
+    },
+    {
+      path: "/mobile",
+      element: <PwaPage />,
+      children: [
+        {
+          path: "department",
+          element: <DepartmentScreen />,
+        },
+        {
+          path: "home",
+          element: <HomeScreen />,
+          index: true,
+        },
+        {
+          path: "scrap",
+          element: <ScrapScreen />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <MainPage />,
-    index: true,
-  },
-  {
-    path: "/validation/:email",
-    element: <ValidationPage />,
-  },
-  {
-    path: "/mobile",
-    element: <PwaPage />,
-    children: [
-      {
-        path: "department",
-        element: <DepartmentScreen />,
-      },
-      {
-        path: "home",
-        element: <HomeScreen />,
-        index: true,
-      },
-      {
-        path: "scrap",
-        element: <ScrapScreen />,
-      },
-    ],
-  },
-]);
+    basename: "/homepage/",
+  }
+);
 
 export const homeRouterInfoList = [
   "Main",
