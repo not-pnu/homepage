@@ -1,9 +1,9 @@
 {
-  "name": "mail-badara",
+  "name": "mailbadara",
   "displayName": "Mail Badara",
-  "homepage": "https://mailbadara.github.io/homepage",
+  "homepage": "https://mailbadara.github.io/homepage/",
   "private": true,
-  "version": "2.1.0",
+  "version": "2.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
