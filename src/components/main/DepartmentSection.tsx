@@ -23,11 +23,12 @@ import { getDepartmentBoard } from "../../apis/department";
 import { Department } from "../../@types/page";
 
 function DepartmentBoard({ data }: { data: Department }) {
+  const url =
+    data.code === "me"
+      ? "https://me.pusan.ac.kr/new/sub05/sub01_01.asp"
+      : `https://${data.code}.pusan.ac.kr/${data.code}/index.do`;
   return (
-    <a
-      href={`https://${data.code}.pusan.ac.kr/${data.code}/index.do`}
-      target="_blank"
-    >
+    <a href={url} target="_blank">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
